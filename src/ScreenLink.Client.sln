@@ -1,0 +1,34 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.31903.59
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ScreenLink", "ScreenLink\ScreenLink.csproj", "{1BF2CC2A-653F-4600-A8FA-04979C3D4229}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ScreenLink.Client", "ScreenLink.Client\ScreenLink.Client.csproj", "{7182C0F6-7284-46FE-87D9-22FD016DA7E6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ScreenLink.Service", "ScreenLink.Service\ScreenLink.Service.csproj", "{34948BDC-C28E-44CC-9229-D6EE378179D8}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{1BF2CC2A-653F-4600-A8FA-04979C3D4229}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1BF2CC2A-653F-4600-A8FA-04979C3D4229}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1BF2CC2A-653F-4600-A8FA-04979C3D4229}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1BF2CC2A-653F-4600-A8FA-04979C3D4229}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7182C0F6-7284-46FE-87D9-22FD016DA7E6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7182C0F6-7284-46FE-87D9-22FD016DA7E6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7182C0F6-7284-46FE-87D9-22FD016DA7E6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7182C0F6-7284-46FE-87D9-22FD016DA7E6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{34948BDC-C28E-44CC-9229-D6EE378179D8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{34948BDC-C28E-44CC-9229-D6EE378179D8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{34948BDC-C28E-44CC-9229-D6EE378179D8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{34948BDC-C28E-44CC-9229-D6EE378179D8}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

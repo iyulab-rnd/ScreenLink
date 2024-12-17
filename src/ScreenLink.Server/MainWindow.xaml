@@ -1,0 +1,89 @@
+﻿<Window
+  x:Class="ScreenLink.Server.MainWindow"
+  xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+  xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+  Title="ScreenLink Server"
+  Width="1200"
+  Height="700"
+  WindowStartupLocation="CenterScreen">
+  <Grid Margin="10">
+    <Grid.RowDefinitions>
+      <RowDefinition Height="Auto" />
+      <RowDefinition Height="Auto" />
+      <RowDefinition Height="*" />
+    </Grid.RowDefinitions>
+
+    <StackPanel Grid.Row="0">
+      <StackPanel Margin="0,0,0,10" Orientation="Horizontal">
+        <TextBlock VerticalAlignment="Center" Text="Port: " />
+        <TextBox
+          Width="100"
+          Margin="5,0,0,0"
+          Text="{Binding Port}" />
+        <Button
+          x:Name="btnStartServer"
+          Margin="10,0,0,0"
+          Padding="10,5"
+          Click="btnStartServer_Click"
+          Content="Start Server" />
+      </StackPanel>
+      <TextBlock Margin="0,5" Text="{Binding Status}" />
+    </StackPanel>
+
+    <ListView
+      Grid.Row="1"
+      Height="100"
+      Margin="0,10"
+      ItemsSource="{Binding Logs}">
+      <ListView.ItemTemplate>
+        <DataTemplate>
+          <TextBlock Text="{Binding}" TextWrapping="Wrap" />
+        </DataTemplate>
+      </ListView.ItemTemplate>
+    </ListView>
+
+    <Grid Grid.Row="2" Margin="0,10,0,0">
+      <Grid.ColumnDefinitions>
+        <ColumnDefinition Width="350" />
+        <ColumnDefinition Width="*" />
+      </Grid.ColumnDefinitions>
+
+      <DockPanel Grid.Column="0">
+        <TextBlock
+          Margin="0,0,0,5"
+          DockPanel.Dock="Top"
+          FontWeight="Bold"
+          Text="Connected Clients" />
+        <ListView ItemsSource="{Binding Clients}" SelectedItem="{Binding SelectedClient}">
+          <ListView.View>
+            <GridView>
+              <GridViewColumn
+                Width="120"
+                DisplayMemberBinding="{Binding IpAddress}"
+                Header="IP Address" />
+              <GridViewColumn
+                Width="180"
+                DisplayMemberBinding="{Binding LastUpdateTimeString}"
+                Header="Last Update" />
+            </GridView>
+          </ListView.View>
+        </ListView>
+      </DockPanel>
+
+      <DockPanel Grid.Column="1" Margin="10,0,0,0">
+        <TextBlock
+          Margin="0,0,0,5"
+          DockPanel.Dock="Top"
+          FontWeight="Bold"
+          Text="Latest Screenshot" />
+        <Border BorderBrush="Gray" BorderThickness="1">
+          <Image
+            x:Name="screenshotImage"
+            RenderOptions.BitmapScalingMode="HighQuality"
+            SnapsToDevicePixels="True"
+            Stretch="Uniform" />
+        </Border>
+      </DockPanel>
+    </Grid>
+  </Grid>
+</Window>
